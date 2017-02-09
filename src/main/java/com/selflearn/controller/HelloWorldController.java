@@ -12,7 +12,7 @@ public class HelloWorldController {
 	public ModelAndView showMessage(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
 		System.out.println("in controller");
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("helloworld");
 		mv.addObject("message", message);
 		mv.addObject("name", name);
 		return mv;

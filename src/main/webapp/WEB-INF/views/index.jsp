@@ -2,10 +2,10 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="/scripts/editor.js"></script>
+		<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 		<script>
 			$(document).ready(function() {
-				$("#txtEditor").Editor();
+				CKEDITOR.replace( 'editor1' );
 			});
 		</script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -53,7 +53,7 @@ $(document).ready(function(){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="hello" id="home">Home</a>
+      <a class="navbar-brand" href="hello?name=mahesh" id="home">Home</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -77,7 +77,7 @@ $(document).ready(function(){
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 nopadding">
-							<textarea id="txtEditor"></textarea> 
+							<textarea id="editor1"></textarea> 
 						</div>
 					</div>
 				</div>
