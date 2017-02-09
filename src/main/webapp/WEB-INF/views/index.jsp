@@ -29,15 +29,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
 
-	$("#mainDiv").load("home.html");
-	$("#home").click(function(){
-		$("#mainDiv").load("home.html");
-			});	
 	
-	$("#takeSurvey").click(function(){
-		alert("dfsdf")
-		$("#mainDiv").load("takeSurvey.html");
-	});
 		
 		
 })
@@ -53,7 +45,7 @@ $(document).ready(function(){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="hello?name=mahesh" id="home">Home</a>
+      <a class="navbar-brand" href="home?name=mahesh" id="home">Home</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
