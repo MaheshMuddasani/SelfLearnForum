@@ -1,3 +1,4 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <html lang="en">
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -45,7 +46,7 @@ $(document).ready(function(){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="home?name=mahesh" id="home">Home</a>
+      <a class="navbar-brand" href="home" id="home">Home</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -58,27 +59,30 @@ $(document).ready(function(){
   </div>
 </nav>
 
-<div id="txtEditor"></div>
+<form:form class="form-horizontal"  action="home/save" method="POST"  modelAttribute="forumCollection" >
+<div id="mainDiv" >
 
-<div id="mainDiv">
-
-	<body>
-		<div class="container-fluid">
+		<div class="container-fluid form-group" >
 			<div class="row">
-				<h2 class="demo-text">LineControl Demo</h2>
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 nopadding">
-							<textarea id="editor1"></textarea> 
+						<form:textarea path="firstname" id="editor1"/> 
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid footer">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>
+			<div class="container-fluid footer">
 		</div>
-	</body>
+		
 </div>
+</form:form>
 </body>
 </html>
 
